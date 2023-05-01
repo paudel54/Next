@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 export default function NavbarItem({ title, param }) {
   const searchParams = useSearchParams();
-  const genre = searchParams.get("genere");
+  const genre = searchParams.get("genre");
   //   console.log("this is param we recieve", param);
   return (
     <div>
@@ -14,7 +14,7 @@ export default function NavbarItem({ title, param }) {
             genre == param &&
             "underline underline-offset-8 decoration-4 decoration-amber-500 rounded-lg"
           }`}
-          href={`/?genere=${param}`}
+          href={`/?genre=${param}`}
         >
           {title}
         </Link>
