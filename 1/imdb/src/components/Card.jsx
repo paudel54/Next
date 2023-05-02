@@ -5,7 +5,7 @@ const Card = ({ key, result }) => {
   //   console.log(
   //     "***************************************************Here is result****************************************************"
   //   );
-  console.log(result);
+  // console.log(result);
   return (
     <div
       className="cursor-pointer sm:border sm:border-slate-400 transition-shadow duration-200 
