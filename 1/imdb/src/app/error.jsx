@@ -11,7 +11,7 @@ const Error = ({ error, reset }) => {
     <div className="text-center mt-10">
       <h1>Something went wrong</h1>
       <button
-        className="bg-gray-200 hover:bg-amber-400  text-black m-4 rounded-xl p-3 "
+        className="bg-gray-200 hover:bg-amber-400 animate- text-black m-4 rounded-xl p-3 "
         onClick={() => reset()}
       >
         Try Again
