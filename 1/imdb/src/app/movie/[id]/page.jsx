@@ -15,7 +15,7 @@ export default async function MoviePage({ params }) {
   const movieId = params;
   //   console.log("test movidIdparam", movieId.id);
   const movie = await getMovie(movieId);
-  console.log("Getting out the result of movie", movie);
+  //   console.log("Getting out the result of movie", movie);
   return (
     <div className="w-full">
       {/* <h1>{movie.original_title || movie.name}</h1> */}
