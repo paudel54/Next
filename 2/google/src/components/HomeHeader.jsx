@@ -13,7 +13,7 @@ const HomeHeader = () => {
             Images
           </Link>
           <BsFillGrid3X3GapFill className=" text-4xl p-2 bg-transparent hover:bg-gray-300 hover:rounded-full" />
-          <button className="bg-blue-500 text-white px-6 py-2 font-medium hover:brightness-105 hover:shadow-md transition-shadow">
+          <button className="bg-blue-500 text-white  rounded-sm px-6 py-2 font-medium hover:brightness-105 hover:shadow-md transition-shadow">
             Sign in
           </button>
         </div>
