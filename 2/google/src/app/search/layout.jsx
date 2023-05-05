@@ -13,3 +13,5 @@ export default function SearchLayout({ children }) {
     </div>
   );
 }
+
+// update search header components
