@@ -5,6 +5,7 @@ import SearchBox from "./SearchBox";
 import SearchHeaderOptions from "./SearchHeaderOptions";
 import { RiSettings3Line } from "react-icons/ri";
 import { TbGridDots } from "react-icons/tb";
+import DarkModeSwitch from "./DarkModeSwitch";
 const SearchHeader = () => {
   return (
     <header className="sticky top-0 bg-white">
@@ -21,10 +22,12 @@ const SearchHeader = () => {
         <div className="flex-1">
           <SearchBox />
         </div>
+
         <div className="hidden md:inline-flex space-x-2">
           <RiSettings3Line className="header-icon" />
           <TbGridDots className="header-icon" />
         </div>
+        <DarkModeSwitch />
         <button className="bg-blue-500 text-white px-6 py-2 font-medium  rounded-md hover:brightness-105 hover:shadow-md transition-all ml-2">
           Sign in
         </button>
