@@ -1,11 +1,14 @@
 import React from "react";
 import Link from "next/link";
 import ImageSearchResults from "@/components/ImageSearchResults";
+// on Service it's vary easy to navigate params, simply use searchParams but this can't be done on
+//Client side
 export default async function ImageSearchPage({ searchParams }) {
+  const startIndex = searchParams.start || "1";
   // to solve API exhaust:
   await new Promise((resolve) => setTimeout(resolve, 1000));
   const response = await fetch(
-    `https://www.googleapis.com/customsearch/v1?key=${process.env.GOOGLE_API_KEY}&cx=${process.env.CONTEXT_KEY}&q=${searchParams.searchTerm}&searchType=image`
+    `https://www.googleapis.com/customsearch/v1?key=${process.env.GOOGLE_API_KEY}&cx=${process.env.CONTEXT_KEY}&q=${searchParams.searchTerm}&searchType=image&start=${startIndex}`
   );
 
   // if (!response.ok) {

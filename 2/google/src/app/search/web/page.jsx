@@ -2,10 +2,11 @@ import React from "react";
 import Link from "next/link";
 import WebSearchResults from "@/components/WebSearchResults";
 export default async function WebSearchPage({ searchParams }) {
+  const startIndex = searchParams.start || "1";
   // to solve API exhaust:
-  await new Promise((resolve) => setTimeout(resolve, 1000));
+  await new Promise((resolve) => setTimeout(resolve, 5000));
   const response = await fetch(
-    `https://www.googleapis.com/customsearch/v1?key=${process.env.GOOGLE_API_KEY}&cx=${process.env.CONTEXT_KEY}&q=${searchParams.searchTerm}`
+    `https://www.googleapis.com/customsearch/v1?key=${process.env.GOOGLE_API_KEY}&cx=${process.env.CONTEXT_KEY}&q=${searchParams.searchTerm}&start=${startIndex}`
   );
 
   // if (!response.ok) {
