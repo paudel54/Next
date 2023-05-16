@@ -6,7 +6,7 @@ import { ImHome } from 'react-icons/im';
 
 export default function Header() {
     return (
-        <div className=''>
+        <div className='shadow-sm border-b-2 sticky top-0 bg-white z-30'>
             {/* left */}
             <div className='flex items-center justify-between max-w-6xl mx-4 xl:mx-auto'>
                 <div className='cursor-pointer h-24 w-24 relative hidden lg:inline-grid'>
@@ -44,8 +44,6 @@ export default function Header() {
                 </div>
 
             </div>
-
-
 
         </div>
     )
