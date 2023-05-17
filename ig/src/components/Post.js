@@ -1,5 +1,8 @@
 import React from 'react'
 import { BiDotsHorizontalRounded } from 'react-icons/bi'
+import { AiOutlineHeart } from 'react-icons/ai'
+import { BsChatDots, BsBookmarks } from 'react-icons/bs';
+
 export default function Post({ id, username, userImg, img, caption }) {
     return (
         <div className='bg-white my-7 border rounded-md'>
@@ -11,6 +14,14 @@ export default function Post({ id, username, userImg, img, caption }) {
             </div>
             {/* Post Image */}
             <img src={img} className='object-cover w-full' />
+            {/* Post Buttons */}
+            <div className='flex justify-between px-4 pt-4 p-2'>
+                <div className='flex space-x-4'>
+                    <AiOutlineHeart className='btn' />
+                    <BsChatDots className='btn' />
+                </div>
+                <BsBookmarks className='btn' />
+            </div>
         </div>
     )
 }
