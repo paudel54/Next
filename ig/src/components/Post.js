@@ -1,7 +1,7 @@
 import React from 'react'
 import { BiDotsHorizontalRounded } from 'react-icons/bi'
 import { AiOutlineHeart } from 'react-icons/ai'
-import { BsChatDots, BsBookmarks } from 'react-icons/bs';
+import { BsChatDots, BsBookmarks, BsEmojiSmile } from 'react-icons/bs';
 
 export default function Post({ id, username, userImg, img, caption }) {
     return (
@@ -22,6 +22,14 @@ export default function Post({ id, username, userImg, img, caption }) {
                 </div>
                 <BsBookmarks className='btn' />
             </div>
+            {/* Post Comments */}
+            <p className='p-5 truncate'><span className='font-bold mr-2'>{username}</span>{caption}</p>
+            {/* Post input Box */}
+            <form className='flex items-center p-4'>
+                <BsEmojiSmile className='h-7' />
+                <input className='border-none flex-1 outline-none' type='text' placeholder='Enter Your Post...' />
+                <button className='text-blue-400 font-bold '>Post</button>
+            </form>
         </div>
     )
 }
